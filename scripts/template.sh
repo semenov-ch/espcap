@@ -9,7 +9,7 @@ if [[ $# -ne 1 ]] ; then
     exit
 fi
 
-curl -XPUT 'http://'$1'/_template/packets-template' -d '
+curl -H 'Content-Type: application/json' -XPUT 'http://'$1'/_template/packets-template' -d '
 {
     "template": "packets-*",
     "mappings": {
